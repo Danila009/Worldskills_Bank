@@ -52,6 +52,7 @@ class HomeFragment : Fragment() {
         nameList.add("Отделения и банкоматы")
         nameList.add("Уведомления")
         nameList.add("Сервисы")
+
         nameList.add("Страхование")
         nameList.add("Кредиты")
         nameList.add("Инвестиции")
