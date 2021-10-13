@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "577640529135",
+    "project_id": "worldskilss-bank",
+    "storage_bucket": "worldskilss-bank.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:577640529135:android:4842fc446661ea5c1bef1a",
+        "android_client_info": {
+          "package_name": "com.example.worldskillbank"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "577640529135-qmr54n0dj2v0c98on5psoqgofeto4ahd.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB2DMpNHfz42HMaNyFcQ1YoMwkMVQfhUlw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "577640529135-qmr54n0dj2v0c98on5psoqgofeto4ahd.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

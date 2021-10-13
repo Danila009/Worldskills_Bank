@@ -1,0 +1,20 @@
+<resources>
+    <string name="app_name">Worldskill bank</string>
+    <string name="name_bank">Worldskills Bank</string>
+    <string name="entrance">Войти</string>
+    <string name="exchange_rates">Курсы валют</string>
+    <string name="branches_and_ATMs">Отделения и банкоматы</string>
+    <string name="title_activity_main_screen">Main_screen</string>
+    <string name="title_home">Главная</string>
+    <string name="title_dashboard">Платежи</string>
+    <string name="title_notifications">История</string>
+    <string name="title_activity_main_screen1">Main_screen_1</string>
+    <string name="registration">Регистрация</string>
+    <string name="cancellation">Отмена</string>
+    <string name="dialogue">Диалоги</string>
+    <string name="purse">Кошелёк</string>
+    <string name="balance">Баланс: 35784</string>
+    <string name="proceed">Продолжить</string>
+    <string name="Notifications">Уведомления</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+</resources>
