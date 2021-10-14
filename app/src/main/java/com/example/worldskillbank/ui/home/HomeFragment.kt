@@ -13,6 +13,8 @@ import androidx.core.view.isVisible
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
+import androidx.navigation.findNavController
+import androidx.navigation.fragment.NavHostFragment.findNavController
 import androidx.recyclerview.widget.RecyclerView
 import com.example.worldskillbank.MainActivity
 import com.example.worldskillbank.R
@@ -52,7 +54,6 @@ class HomeFragment : Fragment() {
         nameList.add("Отделения и банкоматы")
         nameList.add("Уведомления")
         nameList.add("Сервисы")
-
         nameList.add("Страхование")
         nameList.add("Кредиты")
         nameList.add("Инвестиции")
@@ -64,14 +65,19 @@ class HomeFragment : Fragment() {
         binding.list.adapter = ArrayAdapter(
             requireActivity().applicationContext,
             R.layout.text_color_white, nameList
+
         )
 
 
         binding.list.setOnItemClickListener { adapterView, view, i, l ->
 
-            if (i == 3){
-                Toast.makeText(requireActivity(), "Уведомления",Toast.LENGTH_LONG).show()
+            when(i)
+            {
+                3-> view.findNavController().navigate(R.id.notifications_1)
+                2-> view.findNavController().navigate(R.id.branches_and_ATMs2)
+                1-> view.findNavController().navigate(R.id.exchange_rates)
             }
+            nameList.clear()
 
         }
 

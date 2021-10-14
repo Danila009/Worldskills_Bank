@@ -1,23 +1,119 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/RL"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/black"
     tools:context=".ui.notifications.NotificationsFragment">
 
-    <TextView
-        android:id="@+id/text_notifications"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="8dp"
-        android:textAlignment="center"
-        android:textSize="20sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <RelativeLayout
+        android:id="@+id/RL_Profress"
+        android:layout_width="236dp"
+        android:layout_height="111dp"
+        android:layout_marginLeft="0dp"
+        android:layout_toRightOf="@+id/RL"
+        tools:ignore="NotSibling">
+
+        <TextView
+            android:id="@+id/text_Consumption"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="10dp"
+            android:text="Расходы за сегодня"
+            android:textColor="@color/white"
+            android:textSize="16dp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/text_rubles"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/text_Consumption"
+            android:layout_marginStart="100dp"
+            android:layout_marginTop="30dp"
+            android:layout_toEndOf="@+id/text_rubles2"
+            android:text="10000Р"
+            android:textColor="@color/white" />
+
+        <TextView
+            android:id="@+id/text_rubles2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/text_Consumption"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="30dp"
+            android:text="6000Р"
+            android:textColor="@color/white" />
+
+        <ProgressBar
+            android:id="@+id/progressBar"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="200sp"
+            android:layout_height="20sp"
+            android:layout_alignTop="@+id/text_rubles"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="20dp"
+            android:max="10000"
+            android:progress="6000"
+            android:progressTint="@color/red" />
+
+        <TextView
+            android:id="@+id/change"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/progressBar"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="20dp"
+            android:text="Изменить"
+            android:textColor="@color/Green"
+            android:textSize="12dp" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="174dp"
+        android:layout_height="170dp"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="0dp"
+        android:layout_marginEnd="1dp"
+        android:layout_toEndOf="@+id/RL_Profress"
+        tools:ignore="NotSibling">
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/all"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="5dp"
+            android:layout_marginEnd="5dp"
+            android:text="Все"
+            android:textColor="@color/white"
+            app:cornerRadius="10dp" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/Writeoff"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/all"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="5dp"
+            android:layout_marginEnd="5dp"
+            android:text="Списания"
+            android:textColor="@color/white"
+            app:cornerRadius="10dp" />
+
+        <com.google.android.material.button.MaterialButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/Writeoff"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="5dp"
+            android:layout_marginEnd="5dp"
+            android:textColor="@color/white"
+            android:text="Зачисления"
+            app:cornerRadius="10dp" />
+    </RelativeLayout>
+</RelativeLayout>

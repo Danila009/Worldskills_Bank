@@ -64,6 +64,7 @@ class MainActivity : AppCompatActivity() {
             val builder = AlertDialog.Builder(this)
             val inflater = layoutInflater
             val dialogLayout = inflater.inflate(R.layout.entrance_design_dialog, null)
+
             val Btn_entrance = dialogLayout?.findViewById(R.id.entrance) as Button
             val Btn_registration = dialogLayout.findViewById(R.id.registration_but) as Button
             val cancellation_1 = dialogLayout.findViewById<Button>(R.id.cancellation_1)

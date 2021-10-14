@@ -8,8 +8,8 @@
     tools:context=".Notifications">
 
     <ListView
-        android:layout_width="409dp"
-        android:layout_height="520dp"
+        android:layout_width="412dp"
+        android:layout_height="610dp"
         android:layout_marginStart="1dp"
         android:layout_marginEnd="1dp"
         android:layout_marginBottom="1dp"
@@ -22,11 +22,9 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
-        android:layout_marginTop="16dp"
-        android:layout_marginBottom="17dp"
         android:text="Все"
+        android:textColor="@color/white"
         app:cornerRadius="20dp"
-        app:layout_constraintBottom_toTopOf="@+id/_dynamic"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         tools:ignore="MissingConstraints" />
@@ -36,11 +34,9 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
-        android:layout_marginTop="16dp"
-        android:layout_marginBottom="17dp"
         android:text="Зачисления"
+        android:textColor="@color/white"
         app:cornerRadius="20dp"
-        app:layout_constraintBottom_toTopOf="@+id/_dynamic"
         app:layout_constraintStart_toEndOf="@+id/button4"
         app:layout_constraintTop_toTopOf="parent"
         tools:ignore="MissingConstraints" />
@@ -50,12 +46,29 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
-        android:layout_marginTop="16dp"
-        android:layout_marginBottom="17dp"
         android:text="Списания"
+        android:textColor="@color/white"
         app:cornerRadius="20dp"
-        app:layout_constraintBottom_toTopOf="@+id/_dynamic"
         app:layout_constraintStart_toEndOf="@+id/button2"
         app:layout_constraintTop_toTopOf="parent"
         tools:ignore="MissingConstraints" />
+
+    <Switch
+        android:id="@+id/switch1"
+        android:layout_width="wrap_content"
+        android:layout_height="38dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="18dp"
+        android:text="@string/Notifications"
+        android:theme="@style/MySwitch"
+        android:thumb="@drawable/switch_thumb"
+        android:textColor="@color/white"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:checked="true"
+        app:layout_constraintBottom_toTopOf="@+id/_dynamic"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button3"
+        tools:ignore="UnknownId,UseSwitchCompatOrMaterialXml" />
 </androidx.constraintlayout.widget.ConstraintLayout>

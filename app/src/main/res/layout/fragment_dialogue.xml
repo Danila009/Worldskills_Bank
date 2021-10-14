@@ -8,14 +8,13 @@
     tools:context=".fragment_dialogue">
 
     <EditText
-        android:id="@+id/editTextTextPersonName2"
+        android:id="@+id/editTextTextPersonName"
         android:layout_width="320dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="4dp"
         android:layout_marginBottom="70dp"
         android:backgroundTint="@color/ic_launcher_background"
         android:ems="10"
-        android:hint="Name"
         android:inputType="textPersonName"
         android:textAlignment="center"
         android:textColor="@color/ic_launcher_background"
@@ -37,15 +36,15 @@
         app:cornerRadius="40dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/editTextTextPersonName2"
+        app:layout_constraintStart_toEndOf="@+id/editTextTextPersonName"
         tools:ignore="MissingConstraints" />
 
     <TextView
-        android:id="@+id/textView7"
+        android:id="@+id/textUsers"
         android:layout_width="185dp"
         android:layout_height="473dp"
         android:layout_marginEnd="16dp"
-        android:text="TextView"
+        android:text="sfdfsd"
         android:textAlignment="textEnd"
         android:textColor="@color/white"
         android:textStyle="bold"

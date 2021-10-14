@@ -31,21 +31,29 @@
         <entry key="..\:/Users/danbe/Desktop/Adroid Studio/Worldskillbank_1/app/src/main/res/menu/bottom_nav_menu.xml" value="0.12962962962962962" />
         <entry key="..\:/Users/student/AndroidStudioProjects/Worldskillbank_1/app/src/main/res/drawable-v24/graduent.xml" value="0.30925925925925923" />
         <entry key="..\:/Users/student/AndroidStudioProjects/Worldskillbank_1/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.3828125" />
+        <entry key="..\:/Users/student/AndroidStudioProjects/Worldskillbank_1/app/src/main/res/drawable/change_dialog.xml" value="0.3769230769230769" />
         <entry key="..\:/Users/student/AndroidStudioProjects/Worldskillbank_1/app/src/main/res/drawable/grad.xml" value="0.3769230769230769" />
         <entry key="..\:/Users/student/AndroidStudioProjects/Worldskillbank_1/app/src/main/res/drawable/grad_1.xml" value="0.3769230769230769" />
         <entry key="..\:/Users/student/AndroidStudioProjects/Worldskillbank_1/app/src/main/res/drawable/ic_dashboard_black_24dp.xml" value="0.30925925925925923" />
         <entry key="..\:/Users/student/AndroidStudioProjects/Worldskillbank_1/app/src/main/res/drawable/ic_home_black_24dp.xml" value="0.30925925925925923" />
         <entry key="..\:/Users/student/AndroidStudioProjects/Worldskillbank_1/app/src/main/res/drawable/krujok.xml" value="0.30925925925925923" />
         <entry key="..\:/Users/student/AndroidStudioProjects/Worldskillbank_1/app/src/main/res/drawable/krujok_1.xml" value="0.3828125" />
+        <entry key="..\:/Users/student/AndroidStudioProjects/Worldskillbank_1/app/src/main/res/drawable/styles.xml" value="0.3769230769230769" />
+        <entry key="..\:/Users/student/AndroidStudioProjects/Worldskillbank_1/app/src/main/res/drawable/switch_thumb.xml" value="0.3769230769230769" />
+        <entry key="..\:/Users/student/AndroidStudioProjects/Worldskillbank_1/app/src/main/res/drawable/switchcompat.xml" value="0.3769230769230769" />
         <entry key="..\:/Users/student/AndroidStudioProjects/Worldskillbank_1/app/src/main/res/layout/activity_branches_and_atms.xml" value="0.36666666666666664" />
         <entry key="..\:/Users/student/AndroidStudioProjects/Worldskillbank_1/app/src/main/res/layout/activity_exchange_rates.xml" value="0.36666666666666664" />
         <entry key="..\:/Users/student/AndroidStudioProjects/Worldskillbank_1/app/src/main/res/layout/activity_main.xml" value="0.36666666666666664" />
         <entry key="..\:/Users/student/AndroidStudioProjects/Worldskillbank_1/app/src/main/res/layout/activity_main_screen.xml" value="0.36666666666666664" />
+        <entry key="..\:/Users/student/AndroidStudioProjects/Worldskillbank_1/app/src/main/res/layout/change_dialog.xml" value="0.36666666666666664" />
         <entry key="..\:/Users/student/AndroidStudioProjects/Worldskillbank_1/app/src/main/res/layout/entrance_design_dialog.xml" value="0.36666666666666664" />
+        <entry key="..\:/Users/student/AndroidStudioProjects/Worldskillbank_1/app/src/main/res/layout/fragment_branches_and_atms.xml" value="0.36666666666666664" />
         <entry key="..\:/Users/student/AndroidStudioProjects/Worldskillbank_1/app/src/main/res/layout/fragment_dashboard.xml" value="0.36666666666666664" />
         <entry key="..\:/Users/student/AndroidStudioProjects/Worldskillbank_1/app/src/main/res/layout/fragment_dialogue.xml" value="0.35260416666666666" />
         <entry key="..\:/Users/student/AndroidStudioProjects/Worldskillbank_1/app/src/main/res/layout/fragment_home.xml" value="0.33" />
-        <entry key="..\:/Users/student/AndroidStudioProjects/Worldskillbank_1/app/src/main/res/layout/fragment_notifications.xml" value="0.36666666666666664" />
+        <entry key="..\:/Users/student/AndroidStudioProjects/Worldskillbank_1/app/src/main/res/layout/fragment_notifications.xml" value="0.33" />
+        <entry key="..\:/Users/student/AndroidStudioProjects/Worldskillbank_1/app/src/main/res/layout/fragment_notifications2.xml" value="0.36666666666666664" />
+        <entry key="..\:/Users/student/AndroidStudioProjects/Worldskillbank_1/app/src/main/res/layout/myswitch.xml" value="0.36666666666666664" />
         <entry key="..\:/Users/student/AndroidStudioProjects/Worldskillbank_1/app/src/main/res/layout/now_card.xml" value="0.36666666666666664" />
         <entry key="..\:/Users/student/AndroidStudioProjects/Worldskillbank_1/app/src/main/res/layout/registration.xml" value="0.36666666666666664" />
         <entry key="..\:/Users/student/AndroidStudioProjects/Worldskillbank_1/app/src/main/res/menu/bottom_nav_menu.xml" value="0.36666666666666664" />
