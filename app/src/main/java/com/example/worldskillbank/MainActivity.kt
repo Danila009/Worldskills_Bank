@@ -136,5 +136,7 @@ class MainActivity : AppCompatActivity() {
         cancellation.setOnClickListener {
             dialog.dismiss()
         }
+
     }
+
 }
