@@ -231,6 +231,7 @@ class HomeFragment : Fragment() {
                     dialog_1.dismiss()
                 }
 
+
                 dialog_1.setCancelable(false)
                 dialog_1.window?.setBackgroundDrawableResource(R.drawable.krujok)
             }
