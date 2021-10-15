@@ -72,7 +72,6 @@ class NotificationsFragment : Fragment() {
             dialog.setCancelable(true)
 
             dialog.window?.setBackgroundDrawableResource(R.drawable.krujok)
-
         }
 
         return root

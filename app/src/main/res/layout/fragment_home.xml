@@ -29,10 +29,10 @@
 
 
             <TextView
-                android:id="@+id/textView3"
+                android:id="@+id/card_name"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/purse"
+                android:text="@string/card"
                 android:textColor="@color/ic_launcher_background"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
@@ -46,9 +46,9 @@
                 android:layout_marginBottom="7dp"
                 android:text="@string/balance"
                 android:textColor="@color/white"
-                app:layout_constraintBottom_toTopOf="@+id/textView6"
+                app:layout_constraintBottom_toTopOf="@+id/informationcard"
                 app:layout_constraintStart_toEndOf="@+id/imageView"
-                app:layout_constraintTop_toBottomOf="@+id/textView3" />
+                app:layout_constraintTop_toBottomOf="@+id/card_name" />
 
             <TextView
                 android:id="@+id/textView5"
@@ -66,15 +66,15 @@
                 android:layout_marginTop="7dp"
                 android:layout_marginBottom="7dp"
                 android:src="@drawable/purse"
-                app:layout_constraintBottom_toTopOf="@+id/textView6"
+                app:layout_constraintBottom_toTopOf="@+id/informationcard"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/textView3" />
+                app:layout_constraintTop_toBottomOf="@+id/card_name" />
 
             <TextView
-                android:id="@+id/textView6"
+                android:id="@+id/informationcard"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Оформить новую карту"
+                android:text="@string/card_active"
                 android:textColor="#0BB30E"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintStart_toStartOf="parent" />
@@ -93,15 +93,15 @@
         app:layout_constraintTop_toBottomOf="@+id/constraintLayout">
 
         <com.google.android.material.button.MaterialButton
-            android:id="@+id/button9"
+            android:id="@+id/Block_but"
             android:layout_width="322dp"
             android:layout_height="65dp"
             android:layout_marginBottom="4dp"
-            android:text="Заблокировать"
+            android:text="@string/Block"
             android:textColor="@color/ic_launcher_background"
             android:visibility="invisible"
             app:cornerRadius="20dp"
-            app:layout_constraintBottom_toTopOf="@+id/button7"
+            app:layout_constraintBottom_toTopOf="@+id/Rename"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             tools:ignore="MissingConstraints" />
@@ -115,13 +115,13 @@
             android:textColor="@color/ic_launcher_background"
             android:visibility="invisible"
             app:cornerRadius="20dp"
-            app:layout_constraintBottom_toTopOf="@+id/button9"
+            app:layout_constraintBottom_toTopOf="@+id/Block_but"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             tools:ignore="MissingConstraints" />
 
         <com.google.android.material.button.MaterialButton
-            android:id="@+id/button7"
+            android:id="@+id/Rename"
             android:layout_width="322dp"
             android:layout_height="65dp"
             android:layout_marginBottom="100dp"
@@ -135,7 +135,7 @@
             tools:ignore="MissingConstraints" />
 
         <com.google.android.material.button.MaterialButton
-            android:id="@+id/button2222"
+            android:id="@+id/Translate_but"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"

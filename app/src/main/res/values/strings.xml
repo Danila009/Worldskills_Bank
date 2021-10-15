@@ -17,4 +17,16 @@
     <string name="proceed">Продолжить</string>
     <string name="Notifications">Уведомления</string>
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="Proceed">Продолжить</string>
+    <string name="See_the_name">Введите название</string>
+    <string name="Enter_the_amount">Введите сумму</string>
+    <string name="Your_card_will_be_blocked">Ваша карта будет заблокирована</string>
+    <string name="Block">Заблокировать</string>
+    <string name="card_active">карта активна</string>
+    <string name="card">Карта</string>
+    <string name="To_another_person">Другому человеку</string>
+    <string name="Between_their">Между своими</string>
+    <string name="Abroad">За рубеж</string>
+    <string name="Soon">Скоро</string>
+    <string name="abroad_commission">Комиссия за перевод 1% \n минимум 30 рублей \n максимум 500 рублей</string>
 </resources>
