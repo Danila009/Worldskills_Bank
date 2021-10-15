@@ -36,7 +36,6 @@ class NotificationsFragment : Fragment() {
         _binding = FragmentNotificationsBinding.inflate(inflater, container, false)
         val root: View = binding.root
 
-
         binding.RLProfress.setOnClickListener {
 
             val dialogBuilder = AlertDialog.Builder(this.context)
