@@ -26,6 +26,8 @@ class HomeFragment : Fragment() {
 
     var bool:Boolean = true
 
+    var result:Float = 0f
+
 
     private val binding get() = _binding!!
 
@@ -193,7 +195,7 @@ class HomeFragment : Fragment() {
                 commission_text.setOnClickListener {
 
                     if (text_users_1.text.toString().isNotEmpty()){
-                        val result:Float = text_users_1.text.toString().toFloat() / 100
+                        result = text_users_1.text.toString().toFloat() / 100
 
                         if (result <=30)
                         {
@@ -209,6 +211,18 @@ class HomeFragment : Fragment() {
                 }
 
                 Proceed_but_1.setOnClickListener {
+                    if (text_users_1.text.toString().isNotEmpty()) {
+
+                        result = text_users_1.text.toString().toFloat() / 100
+
+                        if (result <=30)
+                        {
+                            result = 30f
+                        }else if (result >=500){
+                            result = 500f
+                        }else{
+                            result = text_users_1.text.toString().toFloat() / 100
+                        }
 
                         val dialogBuilder_2 = AlertDialog.Builder(this.context)
                         val bindingChange_2 = AbroadCamuDialogBinding.inflate(inflater)
@@ -216,14 +230,24 @@ class HomeFragment : Fragment() {
 
                         val dialog_2: AlertDialog = dialogBuilder_2.show()
 
-                        val cancellation = dialog_1.findViewById<Button>(R.id.cancellation)
+                        val cancellation = dialog_2.findViewById<Button>(R.id.cancellation)
+                        val Proceed_BUT = dialog_2.findViewById<Button>(R.id.Proceed_BUT)
 
                         cancellation.setOnClickListener {
                             dialog_2.dismiss()
                         }
+                        Proceed_BUT.setOnClickListener {
+                            dialog_2.dismiss()
+                            dialog_1.dismiss()
+                            dialog.dismiss()
+
+                            val Balance:Float = binding.Balance.text.toString().toFloat() - result
+                            binding.Balance.text = Balance.toString()
+                        }
 
                         dialog_2.setCancelable(false)
                         dialog_2.window?.setBackgroundDrawableResource(R.drawable.krujok)
+                    }
 
                 }
 

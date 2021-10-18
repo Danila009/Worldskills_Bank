@@ -137,5 +137,4 @@ class MainActivity : AppCompatActivity() {
             dialog.dismiss()
         }
     }
-
 }

@@ -11,7 +11,7 @@
         android:layout_height="wrap_content">
 
         <com.google.android.material.button.MaterialButton
-            android:id="@+id/materialButton2"
+            android:id="@+id/Proceed_BUT"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginEnd="25dp"
@@ -47,7 +47,7 @@
             android:ems="10"
             android:inputType="number"
             android:textColor="@color/black"
-            app:layout_constraintBottom_toTopOf="@+id/materialButton2"
+            app:layout_constraintBottom_toTopOf="@+id/Proceed_BUT"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent" />
 
@@ -60,7 +60,10 @@
             android:layout_marginEnd="77dp"
             android:layout_marginBottom="8dp"
             android:text="Введите номер караты"
+            android:textAlignment="center"
+            android:textAllCaps="false"
             android:textColor="@color/black"
+            android:textStyle="bold"
             app:layout_constraintBottom_toTopOf="@+id/editTextNumber2"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"

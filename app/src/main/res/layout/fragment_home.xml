@@ -44,7 +44,7 @@
                 android:layout_marginStart="8dp"
                 android:layout_marginTop="7dp"
                 android:layout_marginBottom="7dp"
-                android:text="@string/balance"
+                android:text="Баланс:"
                 android:textColor="@color/white"
                 app:layout_constraintBottom_toTopOf="@+id/informationcard"
                 app:layout_constraintStart_toEndOf="@+id/imageView"
@@ -78,6 +78,28 @@
                 android:textColor="#0BB30E"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintStart_toStartOf="parent" />
+
+            <TextView
+                android:id="@+id/Balance"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:text="43535"
+                android:textColor="@color/white"
+                app:layout_constraintBottom_toTopOf="@+id/informationcard"
+                app:layout_constraintStart_toEndOf="@+id/textView4"
+                app:layout_constraintTop_toBottomOf="@+id/card_name" />
+
+            <TextView
+                android:id="@+id/textView11"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="1dp"
+                android:text="Р"
+                android:textColor="@color/ic_launcher_background"
+                app:layout_constraintBottom_toTopOf="@+id/informationcard"
+                app:layout_constraintStart_toEndOf="@+id/Balance"
+                app:layout_constraintTop_toBottomOf="@+id/card_name" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
     </androidx.constraintlayout.widget.ConstraintLayout>
