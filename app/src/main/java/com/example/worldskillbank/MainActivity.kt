@@ -16,6 +16,7 @@ import androidx.appcompat.app.AlertDialog
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.worldskillbank.databinding.ActivityMainBinding
+import com.example.worldskillbank.db.MuDbManager
 import com.example.worldskillbank.table.new_card
 import com.google.android.material.button.MaterialButton
 import com.google.firebase.database.ktx.database
@@ -27,10 +28,12 @@ class MainActivity : AppCompatActivity() {
     private lateinit var binding: ActivityMainBinding
     var actBar: ActionBar? = null
 
+    val myDbManager = MuDbManager(this)
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+
 
         val database = Firebase.database
         val myRef = database.getReference("test")
@@ -40,6 +43,7 @@ class MainActivity : AppCompatActivity() {
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
+        myDbManager.openDb()
 
         actBar = supportActionBar
         actBar?.hide()
@@ -72,7 +76,10 @@ class MainActivity : AppCompatActivity() {
 
             builder.setView(dialogLayout)
             Btn_entrance.setOnClickListener {
-                screen()
+
+                val intent = Intent(this, Main_screen::class.java)
+                startActivity(intent)
+
             }
             Btn_registration.setOnClickListener {
 
@@ -88,10 +95,6 @@ class MainActivity : AppCompatActivity() {
     }
 
 
-    fun screen(){
-        val intent = Intent(this, Main_screen::class.java)
-        startActivity(intent)
-    }
 
     @SuppressLint("SetTextI18n")
     fun registration(){
@@ -123,7 +126,35 @@ class MainActivity : AppCompatActivity() {
                 } else if (!email.text.toString().any("." :: contains) and  !email.text.toString().any("@" :: contains)) {
                     text.text = "Email введён не коректно"
                 }else {
-                    screen()
+
+                    val rand_sum = (1000..50000).random()
+                    val rand_per_day = (1000..10000).random()
+
+                    val Card_number = (1..9).random().toString()
+                    val Card_number_1 = (1..9).random().toString()
+                    val Card_number_2 = (1..9).random().toString()
+                    val Card_number_3 = (1..9).random().toString()
+                    val Card_number_4 = (1..9).random().toString()
+                    val Card_number_5 = (1..9).random().toString()
+                    val Card_number_6 = (1..9).random().toString()
+                    val Card_number_7 = (1..9).random().toString()
+                    val Card_number_8 = (1..9).random().toString()
+                    val Card_number_9 = (1..9).random().toString()
+                    val Card_number_10 = (1..9).random().toString()
+                    val Card_number_11 = (1..9).random().toString()
+                    val Card_number_12 = (1..9).random().toString()
+                    val Card_number_13 = (1..9).random().toString()
+                    val Card_number_14 = (1..9).random().toString()
+
+                    val Card_number_results = Card_number+Card_number_1+Card_number_2+Card_number_3+Card_number_4+Card_number_5+Card_number_6+
+                            Card_number_7+Card_number_8+Card_number_9+Card_number_10+Card_number_11+Card_number_12+Card_number_13+Card_number_14
+
+
+                    val intent = Intent(this, Main_screen::class.java)
+                    startActivity(intent)
+
+                    myDbManager.insertToDb(rand_sum.toString(), password.text.toString(),email.text.toString(), login.text.toString(), rand_per_day.toString(),
+                        Card_number_results)
                 }
             }
         }
