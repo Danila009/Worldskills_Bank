@@ -29,4 +29,7 @@
     <string name="Abroad">За рубеж</string>
     <string name="Soon">Скоро</string>
     <string name="abroad_commission">Комиссия за перевод 1% \n минимум 30 рублей \n максимум 500 рублей</string>
+    <string name="Write_offs">Списания</string>
+    <string name="Enrollments">Зачисления</string>
+    <string name="all">Все</string>
 </resources>

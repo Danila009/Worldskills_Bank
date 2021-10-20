@@ -4,10 +4,9 @@ import android.annotation.SuppressLint
 import android.app.AlertDialog
 import android.graphics.Color
 import android.os.Bundle
-import android.view.LayoutInflater
-import android.view.View
-import android.view.ViewGroup
+import android.view.*
 import android.widget.*
+import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
@@ -43,6 +42,11 @@ class HomeFragment : Fragment() {
 
         _binding = FragmentHomeBinding.inflate(inflater, container, false)
         val root: View = binding.root
+
+        (activity as AppCompatActivity).supportActionBar!!.setDisplayHomeAsUpEnabled(false)
+        (activity as AppCompatActivity).supportActionBar!!.title = "Главная"
+
+        setHasOptionsMenu(true)
 
         homeViewModel.text.observe(viewLifecycleOwner, Observer {
         })
@@ -276,5 +280,21 @@ class HomeFragment : Fragment() {
         }
         return root
 
+    }
+
+    override fun onCreateOptionsMenu(menu: Menu, inflater: MenuInflater)
+    {
+        inflater.inflate(R.menu.home_menu, menu);
+        super.onCreateOptionsMenu(menu,inflater)
+    }
+
+    override fun onOptionsItemSelected(item: MenuItem): Boolean
+    {
+        val id = item.itemId
+        when (id)
+        {
+
+        }
+        return super.onOptionsItemSelected(item)
     }
 }

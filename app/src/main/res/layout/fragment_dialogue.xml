@@ -1,66 +1,51 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.drawerlayout.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/drawer"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/black"
     tools:context=".fragment_dialogue">
 
-    <EditText
-        android:id="@+id/editTextTextPersonName"
-        android:layout_width="320dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="4dp"
-        android:layout_marginBottom="70dp"
-        android:backgroundTint="@color/ic_launcher_background"
-        android:ems="10"
-        android:inputType="textPersonName"
-        android:textAlignment="center"
-        android:textColor="@color/ic_launcher_background"
-        android:textColorHighlight="@color/ic_launcher_background"
-        android:textColorHint="@color/ic_launcher_background"
-        android:textColorLink="@color/ic_launcher_background"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
 
-    <com.google.android.material.button.MaterialButton
-        android:id="@+id/button"
-        android:layout_width="70dp"
-        android:layout_height="47dp"
-        android:layout_marginStart="4dp"
-        android:layout_marginEnd="13dp"
-        android:layout_marginBottom="70dp"
-        android:drawableBottom="@drawable/ic_baseline_east_24"
-        app:backgroundTint="@color/Green"
-        app:cornerRadius="40dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/editTextTextPersonName"
-        tools:ignore="MissingConstraints" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:orientation="vertical">
 
-    <TextView
-        android:id="@+id/textUsers"
-        android:layout_width="185dp"
-        android:layout_height="473dp"
-        android:layout_marginEnd="16dp"
-        android:text="sfdfsd"
-        android:textAlignment="textEnd"
-        android:textColor="@color/white"
-        android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        <Button
+            android:id="@+id/button2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Button" />
+    </LinearLayout>
 
-    <TextView
-        android:id="@+id/textView9"
-        android:layout_width="185dp"
-        android:layout_height="473dp"
-        android:layout_marginStart="16dp"
-        android:text="TextView"
-        android:textAlignment="viewStart"
-        android:textColor="@color/white"
-        android:textStyle="bold"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+    <LinearLayout
+        android:layout_width="250dp"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        android:background="@color/Gray"
+        android:orientation="vertical">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+        <TextView
+            android:id="@+id/textView9"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="Уведомления"
+            android:textColor="@color/white"
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/textView14"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="Настройки"
+            android:textColor="@color/white"
+            android:textSize="20sp" />
+    </LinearLayout>
+
+</androidx.drawerlayout.widget.DrawerLayout>
