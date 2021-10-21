@@ -2,10 +2,12 @@ package com.example.worldskillbank
 
 import android.os.Bundle
 import android.view.*
+import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.appcompat.app.ActionBar
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.GravityCompat
+import androidx.navigation.findNavController
 import com.example.worldskillbank.databinding.FragmentDialogueBinding
 
 
@@ -22,16 +24,10 @@ class fragment_dialogue : Fragment() {
         binding = FragmentDialogueBinding.inflate(layoutInflater)
 
         (activity as AppCompatActivity).supportActionBar!!.setDisplayHomeAsUpEnabled(false)
-        (activity as AppCompatActivity).supportActionBar!!.title = "Главная"
+        (activity as AppCompatActivity).supportActionBar!!.title = "Уведомления"
 
         setHasOptionsMenu(true)
 
-        binding.apply {
-            button2.setOnClickListener {
-
-                drawer.openDrawer(GravityCompat.START)
-            }
-        }
 
         return inflater.inflate(R.layout.fragment_dialogue, container, false)
     }
@@ -41,15 +37,5 @@ class fragment_dialogue : Fragment() {
     {
         inflater.inflate(R.menu.home_menu, menu);
         super.onCreateOptionsMenu(menu,inflater)
-    }
-
-    override fun onOptionsItemSelected(item: MenuItem): Boolean
-    {
-        val id = item.itemId
-        when (id)
-        {
-
-        }
-        return super.onOptionsItemSelected(item)
     }
 }

@@ -32,4 +32,6 @@
     <string name="Write_offs">Списания</string>
     <string name="Enrollments">Зачисления</string>
     <string name="all">Все</string>
+    <string name="settings">настройки</string>
+    <string name="account">мой аккаунт</string>
 </resources>

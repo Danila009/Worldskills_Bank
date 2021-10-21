@@ -19,6 +19,7 @@ import com.example.worldskillbank.databinding.FragmentNotifications2Binding
 
 class Notifications : Fragment() {
 
+
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
@@ -30,6 +31,7 @@ class Notifications : Fragment() {
         (activity as AppCompatActivity).supportActionBar!!.title = "Уведомления"
 
         setHasOptionsMenu(true)
+
 
         return inflater.inflate(R.layout.fragment_notifications2, container, false)
     }
@@ -47,6 +49,8 @@ class Notifications : Fragment() {
         {
             android.R.id.home -> view?.findNavController()?.navigate(R.id.navigation_home)
             R.id.all -> Toast.makeText(activity, "Sort", Toast.LENGTH_SHORT).show()
+
+
         }
         return super.onOptionsItemSelected(item)
     }
