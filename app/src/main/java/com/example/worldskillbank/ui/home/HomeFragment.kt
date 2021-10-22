@@ -11,8 +11,12 @@ import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.findNavController
+import androidx.recyclerview.widget.GridLayoutManager
+import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.worldskillbank.R
+import com.example.worldskillbank.adapter_RV.adapter_cards
+import com.example.worldskillbank.data_history_RV.bank_cards
 import com.example.worldskillbank.databinding.*
 
 class HomeFragment : Fragment() {
@@ -21,11 +25,15 @@ class HomeFragment : Fragment() {
     private lateinit var homeViewModel: HomeViewModel
     private var _binding: FragmentHomeBinding? = null
 
+    lateinit var binding_1: BankCardsRvBinding
+
     var nameList = ArrayList<String>()
 
     var bool:Boolean = true
 
     var result:Float = 0f
+
+    private val adapter = adapter_cards()
 
 
     private val binding get() = _binding!!
@@ -42,6 +50,8 @@ class HomeFragment : Fragment() {
 
         _binding = FragmentHomeBinding.inflate(inflater, container, false)
         val root: View = binding.root
+
+        binding_1 = BankCardsRvBinding.inflate(layoutInflater)
 
         (activity as AppCompatActivity).supportActionBar!!.setDisplayHomeAsUpEnabled(false)
         (activity as AppCompatActivity).supportActionBar!!.title = "Главная"
@@ -83,7 +93,7 @@ class HomeFragment : Fragment() {
 
         }
 
-        binding.card.setOnClickListener {
+        binding.constraintLayout.setOnClickListener {
 
             if(bool){
                 binding.TranslateBut.visibility = View.VISIBLE
@@ -127,7 +137,7 @@ class HomeFragment : Fragment() {
                         text_inf.textSize = 14F
                     }else
                     {
-                        binding.cardName.text = user_text.text.toString()
+                        binding_1.cardName.text = user_text.text.toString()
                         dialog.dismiss()
                     }
                 }else{
@@ -136,6 +146,41 @@ class HomeFragment : Fragment() {
             }
             dialog.setCancelable(true)
             dialog.window?.setBackgroundDrawableResource(R.drawable.krujok)
+        }
+
+
+        binding.newCard.setOnClickListener {
+
+            binding.RV.layoutManager = LinearLayoutManager(this.context, LinearLayoutManager.HORIZONTAL, false)
+
+            binding.RV.adapter = adapter
+
+            val rand_sum = (1000..50000).random()
+
+            val Card_number = (1..9).random().toString()
+            val Card_number_1 = (1..9).random().toString()
+            val Card_number_2 = (1..9).random().toString()
+            val Card_number_3 = (1..9).random().toString()
+            val Card_number_4 = (1..9).random().toString()
+            val Card_number_5 = (1..9).random().toString()
+            val Card_number_6 = (1..9).random().toString()
+            val Card_number_7 = (1..9).random().toString()
+            val Card_number_8 = (1..9).random().toString()
+            val Card_number_9 = (1..9).random().toString()
+            val Card_number_10 = (1..9).random().toString()
+            val Card_number_11 = (1..9).random().toString()
+            val Card_number_12 = (1..9).random().toString()
+            val Card_number_13 = (1..9).random().toString()
+            val Card_number_14 = (1..9).random().toString()
+
+            val Card_number_results = Card_number+Card_number_1+Card_number_2+Card_number_3+Card_number_4+Card_number_5+Card_number_6+
+                    Card_number_7+Card_number_8+Card_number_9+Card_number_10+Card_number_11+Card_number_12+Card_number_13+Card_number_14
+
+
+            val card = bank_cards(rand_sum,Card_number_results,"RV")
+
+            adapter.addCard(card)
+
         }
 
         binding.BlockBut.setOnClickListener {
@@ -151,8 +196,8 @@ class HomeFragment : Fragment() {
 
             But_proceed.setOnClickListener {
 
-                binding.informationcard.text = "Карта заблокирована"
-                binding.informationcard.setTextColor(Color.RED)
+                binding_1.informationcard.text = "Карта заблокирована"
+                binding_1.informationcard.setTextColor(Color.RED)
                 dialog.dismiss()
             }
 
@@ -245,8 +290,8 @@ class HomeFragment : Fragment() {
                             dialog_1.dismiss()
                             dialog.dismiss()
 
-                            val Balance:Float = binding.Balance.text.toString().toFloat() - result
-                            binding.Balance.text = Balance.toString()
+                            val Balance:Float = binding_1.Balance.text.toString().toFloat() - result
+                            binding_1.Balance.text = Balance.toString()
                         }
 
                         dialog_2.setCancelable(false)
@@ -278,6 +323,7 @@ class HomeFragment : Fragment() {
             dialog.window?.setBackgroundDrawableResource(R.drawable.krujok)
 
         }
+
         return root
 
     }
@@ -297,4 +343,5 @@ class HomeFragment : Fragment() {
         }
         return super.onOptionsItemSelected(item)
     }
+
 }

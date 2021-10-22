@@ -1,14 +1,15 @@
 package com.example.worldskillbank.ui.dashboard
 
 import android.os.Bundle
-import android.view.LayoutInflater
-import android.view.View
-import android.view.ViewGroup
+import android.view.*
 import android.widget.ArrayAdapter
 import android.widget.TextView
+import androidx.appcompat.app.AppCompatActivity
+import androidx.core.view.GravityCompat
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
+import androidx.navigation.findNavController
 import com.example.worldskillbank.R
 import com.example.worldskillbank.databinding.FragmentDashboardBinding
 
@@ -20,6 +21,7 @@ class DashboardFragment : Fragment() {
     var TranslateList = ArrayList<String>()
     var PayList = ArrayList<String>()
 
+
     private val binding get() = _binding!!
 
     override fun onCreateView(
@@ -29,6 +31,9 @@ class DashboardFragment : Fragment() {
     ): View {
         dashboardViewModel =
             ViewModelProvider(this).get(DashboardViewModel::class.java)
+
+        (activity as AppCompatActivity).supportActionBar!!.setDisplayHomeAsUpEnabled(false)
+        setHasOptionsMenu(true)
 
         _binding = FragmentDashboardBinding.inflate(inflater, container, false)
         val root: View = binding.root
@@ -57,6 +62,34 @@ class DashboardFragment : Fragment() {
             R.layout.text_color_white, PayList
         )
 
+        binding.NV.setNavigationItemSelectedListener {
+
+            when(it.itemId)
+            {
+                R.id.Notifications_menu -> view?.findNavController()?.navigate(R.id.notifications_1)
+                R.id.settings -> view?.findNavController()?.navigate(R.id.settings2)
+                R.id.account -> view?.findNavController()?.navigate(R.id.my_account_Fragment)
+            }
+            true
+        }
+
         return root
+    }
+
+    override fun onCreateOptionsMenu(menu: Menu, inflater: MenuInflater)
+    {
+        inflater.inflate(R.menu.home_menu, menu);
+        super.onCreateOptionsMenu(menu,inflater)
+    }
+
+    override fun onOptionsItemSelected(item: MenuItem): Boolean
+    {
+        val id = item.itemId
+        when (id)
+        {
+            R.id.menu -> binding.DL.openDrawer(GravityCompat.START)
+
+        }
+        return super.onOptionsItemSelected(item)
     }
 }

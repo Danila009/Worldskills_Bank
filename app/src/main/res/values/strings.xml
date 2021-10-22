@@ -34,4 +34,6 @@
     <string name="all">Все</string>
     <string name="settings">настройки</string>
     <string name="account">мой аккаунт</string>
+    <string name="Delete_history">Удалить историю</string>
+    <string name="Change_user">Сменить пользователя</string>
 </resources>

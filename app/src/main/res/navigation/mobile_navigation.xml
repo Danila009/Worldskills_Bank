@@ -31,6 +31,12 @@
             app:exitAnim="@anim/slide_out_left"
             app:popEnterAnim="@anim/in_left"
             app:popExitAnim="@anim/slide_out_right"/>
+        <action
+            android:id="@+id/action_navigation_home_to_settings2"
+            app:destination="@id/settings2" />
+        <action
+            android:id="@+id/action_navigation_home_to_my_account_Fragment"
+            app:destination="@id/my_account_Fragment" />
     </fragment>
 
     <fragment
@@ -45,6 +51,12 @@
             app:exitAnim="@anim/slide_out_left"
             app:popEnterAnim="@anim/in_left"
             app:popExitAnim="@anim/slide_out_right"/>
+        <action
+            android:id="@+id/action_navigation_dashboard_to_settings2"
+            app:destination="@id/settings2" />
+        <action
+            android:id="@+id/action_navigation_dashboard_to_my_account_Fragment"
+            app:destination="@id/my_account_Fragment" />
     </fragment>
 
     <fragment
@@ -59,6 +71,12 @@
             app:exitAnim="@anim/slide_out_left"
             app:popEnterAnim="@anim/in_left"
             app:popExitAnim="@anim/slide_out_right"/>
+        <action
+            android:id="@+id/action_navigation_notifications_to_settings2"
+            app:destination="@id/settings2" />
+        <action
+            android:id="@+id/action_navigation_notifications_to_my_account_Fragment"
+            app:destination="@id/my_account_Fragment" />
     </fragment>
     <fragment
         android:id="@+id/dialogue_frag"
@@ -72,19 +90,18 @@
             app:exitAnim="@anim/slide_out_left"
             app:popEnterAnim="@anim/in_left"
             app:popExitAnim="@anim/slide_out_right"/>
+        <action
+            android:id="@+id/action_dialogue_frag_to_settings2"
+            app:destination="@id/settings2" />
+        <action
+            android:id="@+id/action_dialogue_frag_to_my_account_Fragment"
+            app:destination="@id/my_account_Fragment" />
     </fragment>
     <fragment
         android:id="@+id/notifications_1"
         android:name="com.example.worldskillbank.Notifications"
         android:label="fragment_notifications2"
         tools:layout="@layout/fragment_notifications2">
-        <action
-            android:id="@+id/action_notifications_to_navigation_home"
-            app:destination="@id/navigation_home"
-            app:enterAnim="@anim/slide_in_right"
-            app:exitAnim="@anim/slide_out_left"
-            app:popEnterAnim="@anim/in_left"
-            app:popExitAnim="@anim/slide_out_right"/>
     </fragment>
     <activity
         android:id="@+id/branches_and_ATMs2"
@@ -96,4 +113,23 @@
         android:name="com.example.worldskillbank.exchange_rates"
         android:label="activity_exchange_rates"
         tools:layout="@layout/activity_exchange_rates" />
+    <fragment
+        android:id="@+id/settings2"
+        android:name="com.example.worldskillbank.settings"
+        android:label="fragment_settings"
+        tools:layout="@layout/fragment_settings" >
+        <action
+            android:id="@+id/action_settings2_to_mainActivity"
+            app:destination="@id/mainActivity" />
+    </fragment>
+    <activity
+        android:id="@+id/mainActivity"
+        android:name="com.example.worldskillbank.MainActivity"
+        android:label="activity_main"
+        tools:layout="@layout/activity_main" />
+    <fragment
+        android:id="@+id/my_account_Fragment"
+        android:name="com.example.worldskillbank.my_account_Fragment"
+        android:label="fragment_my_account_"
+        tools:layout="@layout/fragment_my_account_" />
 </navigation>

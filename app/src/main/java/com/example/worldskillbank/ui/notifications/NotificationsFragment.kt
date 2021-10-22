@@ -84,6 +84,8 @@ class NotificationsFragment : Fragment() {
             when(it.itemId)
             {
                 R.id.Notifications_menu -> view?.findNavController()?.navigate(R.id.notifications_1)
+                R.id.settings -> view?.findNavController()?.navigate(R.id.settings2)
+                R.id.account -> view?.findNavController()?.navigate(R.id.my_account_Fragment)
             }
             true
         }
