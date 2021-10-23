@@ -19,7 +19,8 @@
     <com.google.android.material.navigation.NavigationView
         android:id="@+id/NavigationView"
         android:layout_width="300dp"
-        android:layout_height="match_parent"
+        android:layout_height="500dp"
+        android:layout_marginTop="0dp"
         app:headerLayout="@layout/header_menu"
         android:layout_gravity="start"
         android:background="@drawable/navigation_view_kruoc"

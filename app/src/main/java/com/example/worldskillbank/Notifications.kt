@@ -15,9 +15,12 @@ import com.example.worldskillbank.R.id.navigation_home
 import com.example.worldskillbank.databinding.FragmentNotifications2Binding
 
 
-    lateinit var binding: FragmentNotifications2Binding
+
 
 class Notifications : Fragment() {
+
+
+    lateinit var binding: FragmentNotifications2Binding
 
 
     override fun onCreateView(

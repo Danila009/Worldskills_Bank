@@ -18,25 +18,20 @@
             app:popEnterAnim="@anim/in_left"
             app:popExitAnim="@anim/slide_out_right"/>
         <action
-            android:id="@+id/action_navigation_home_to_branches_and_ATMs2"
-            app:destination="@id/branches_and_ATMs2"
-            app:enterAnim="@anim/slide_in_right"
-            app:exitAnim="@anim/slide_out_left"
-            app:popEnterAnim="@anim/in_left"
-            app:popExitAnim="@anim/slide_out_right" />
-        <action
-            android:id="@+id/action_navigation_home_to_exchange_rates2"
-            app:destination="@id/exchange_rates2"
-            app:enterAnim="@anim/slide_in_right"
-            app:exitAnim="@anim/slide_out_left"
-            app:popEnterAnim="@anim/in_left"
-            app:popExitAnim="@anim/slide_out_right"/>
-        <action
             android:id="@+id/action_navigation_home_to_settings2"
             app:destination="@id/settings2" />
         <action
             android:id="@+id/action_navigation_home_to_my_account_Fragment"
             app:destination="@id/my_account_Fragment" />
+        <action
+            android:id="@+id/action_navigation_home_to_exchangeRates2"
+            app:destination="@id/exchangeRates2" />
+        <action
+            android:id="@+id/action_navigation_home_to_branchesAndATMs"
+            app:destination="@id/branchesAndATMs" />
+        <action
+            android:id="@+id/action_navigation_home_to_analysis"
+            app:destination="@id/analysis" />
     </fragment>
 
     <fragment
@@ -103,16 +98,6 @@
         android:label="fragment_notifications2"
         tools:layout="@layout/fragment_notifications2">
     </fragment>
-    <activity
-        android:id="@+id/branches_and_ATMs2"
-        android:name="com.example.worldskillbank.branches_and_ATMs"
-        android:label="activity_branches_and_atms"
-        tools:layout="@layout/activity_branches_and_atms" />
-    <activity
-        android:id="@+id/exchange_rates2"
-        android:name="com.example.worldskillbank.exchange_rates"
-        android:label="activity_exchange_rates"
-        tools:layout="@layout/activity_exchange_rates" />
     <fragment
         android:id="@+id/settings2"
         android:name="com.example.worldskillbank.settings"
@@ -131,5 +116,43 @@
         android:id="@+id/my_account_Fragment"
         android:name="com.example.worldskillbank.my_account_Fragment"
         android:label="fragment_my_account_"
-        tools:layout="@layout/fragment_my_account_" />
+        tools:layout="@layout/fragment_my_account_" >
+        <action
+            android:id="@+id/action_my_account_Fragment_to_navigation_home"
+            app:destination="@id/navigation_home" />
+        <action
+            android:id="@+id/action_my_account_Fragment_to_settings2"
+            app:destination="@id/settings2" />
+        <action
+            android:id="@+id/action_my_account_Fragment_to_notifications_1"
+            app:destination="@id/notifications_1" />
+        <action
+            android:id="@+id/action_my_account_Fragment_self"
+            app:destination="@id/my_account_Fragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/exchangeRates2"
+        android:name="com.example.worldskillbank.ExchangeRates"
+        android:label="fragment_exchange_rates"
+        tools:layout="@layout/fragment_exchange_rates" />
+    <fragment
+        android:id="@+id/branchesAndATMs"
+        android:name="com.example.worldskillbank.branchesAndATMs"
+        android:label="fragment_branches_and_a_t_ms"
+        tools:layout="@layout/fragment_branches_and_a_t_ms" />
+    <activity
+        android:id="@+id/branches_and_ATMs2"
+        android:name="com.example.worldskillbank.branches_and_ATMs"
+        android:label="activity_branches_and_atms"
+        tools:layout="@layout/activity_branches_and_atms" />
+    <activity
+        android:id="@+id/exchange_rates2"
+        android:name="com.example.worldskillbank.exchange_rates"
+        android:label="activity_exchange_rates"
+        tools:layout="@layout/activity_exchange_rates" />
+    <fragment
+        android:id="@+id/analysis"
+        android:name="com.example.worldskillbank.Analysis"
+        android:label="fragment_analysis"
+        tools:layout="@layout/fragment_analysis" />
 </navigation>

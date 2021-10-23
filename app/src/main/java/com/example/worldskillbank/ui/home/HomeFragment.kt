@@ -7,6 +7,7 @@ import android.os.Bundle
 import android.view.*
 import android.widget.*
 import androidx.appcompat.app.AppCompatActivity
+import androidx.core.view.GravityCompat
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
@@ -86,8 +87,8 @@ class HomeFragment : Fragment() {
             when(i)
             {
                 3-> view.findNavController().navigate(R.id.notifications_1)
-                2-> view.findNavController().navigate(R.id.branches_and_ATMs2)
-                1-> view.findNavController().navigate(R.id.exchange_rates)
+                2-> view.findNavController().navigate(R.id.branchesAndATMs)
+                1-> view.findNavController().navigate(R.id.exchangeRates2)
             }
             nameList.clear()
 
@@ -151,35 +152,66 @@ class HomeFragment : Fragment() {
 
         binding.newCard.setOnClickListener {
 
-            binding.RV.layoutManager = LinearLayoutManager(this.context, LinearLayoutManager.HORIZONTAL, false)
+            val dialogBuilder = AlertDialog.Builder(this.context)
+            val bindingChange = RenameDialogBinding.inflate(inflater)
+            dialogBuilder.setView(bindingChange.root)
 
-            binding.RV.adapter = adapter
+            val dialog: AlertDialog = dialogBuilder.show()
 
-            val rand_sum = (1000..50000).random()
+            val but_proceed = dialog.findViewById<Button>(R.id.but_proceed)
+            val user_text = dialog.findViewById<TextView>(R.id.user_text)
+            val text_inf = dialog.findViewById<TextView>(R.id.textInf_1)
 
-            val Card_number = (1..9).random().toString()
-            val Card_number_1 = (1..9).random().toString()
-            val Card_number_2 = (1..9).random().toString()
-            val Card_number_3 = (1..9).random().toString()
-            val Card_number_4 = (1..9).random().toString()
-            val Card_number_5 = (1..9).random().toString()
-            val Card_number_6 = (1..9).random().toString()
-            val Card_number_7 = (1..9).random().toString()
-            val Card_number_8 = (1..9).random().toString()
-            val Card_number_9 = (1..9).random().toString()
-            val Card_number_10 = (1..9).random().toString()
-            val Card_number_11 = (1..9).random().toString()
-            val Card_number_12 = (1..9).random().toString()
-            val Card_number_13 = (1..9).random().toString()
-            val Card_number_14 = (1..9).random().toString()
+            but_proceed.setOnClickListener {
 
-            val Card_number_results = Card_number+Card_number_1+Card_number_2+Card_number_3+Card_number_4+Card_number_5+Card_number_6+
-                    Card_number_7+Card_number_8+Card_number_9+Card_number_10+Card_number_11+Card_number_12+Card_number_13+Card_number_14
+                if (user_text.text.toString().isNotEmpty()){
 
+                    if (user_text.text.toString().count() < 3 ){
 
-            val card = bank_cards(rand_sum,Card_number_results,"RV")
+                        text_inf.text = "Название должно состоять из трех или больше символов"
+                        text_inf.setTextColor(Color.RED)
+                        text_inf.textSize = 14F
+                    }else
+                    {
+                        dialog.dismiss()
 
-            adapter.addCard(card)
+                        binding.RV.layoutManager = LinearLayoutManager(this.context, LinearLayoutManager.HORIZONTAL, false)
+
+                        binding.RV.adapter = adapter
+
+                        val rand_sum = (1000..50000).random()
+
+                        val Card_number = (1..9).random().toString()
+                        val Card_number_1 = (1..9).random().toString()
+                        val Card_number_2 = (1..9).random().toString()
+                        val Card_number_3 = (1..9).random().toString()
+                        val Card_number_4 = (1..9).random().toString()
+                        val Card_number_5 = (1..9).random().toString()
+                        val Card_number_6 = (1..9).random().toString()
+                        val Card_number_7 = (1..9).random().toString()
+                        val Card_number_8 = (1..9).random().toString()
+                        val Card_number_9 = (1..9).random().toString()
+                        val Card_number_10 = (1..9).random().toString()
+                        val Card_number_11 = (1..9).random().toString()
+                        val Card_number_12 = (1..9).random().toString()
+                        val Card_number_13 = (1..9).random().toString()
+                        val Card_number_14 = (1..9).random().toString()
+
+                        val Card_number_results = Card_number+Card_number_1+Card_number_2+Card_number_3+Card_number_4+Card_number_5+Card_number_6+
+                                Card_number_7+Card_number_8+Card_number_9+Card_number_10+Card_number_11+Card_number_12+Card_number_13+Card_number_14
+
+                        val card = bank_cards(rand_sum,Card_number_results,user_text.text.toString())
+
+                        adapter.addCard(card)
+
+                    }
+                }else{
+                    dialog.dismiss()
+                }
+            }
+            dialog.setCancelable(true)
+            dialog.window?.setBackgroundDrawableResource(R.drawable.krujok)
+
 
         }
 
@@ -324,6 +356,17 @@ class HomeFragment : Fragment() {
 
         }
 
+        binding.NV.setNavigationItemSelectedListener {
+
+            when(it.itemId)
+            {
+                R.id.Notifications_menu -> view?.findNavController()?.navigate(R.id.notifications_1)
+                R.id.settings -> view?.findNavController()?.navigate(R.id.settings2)
+                R.id.account -> view?.findNavController()?.navigate(R.id.my_account_Fragment)
+            }
+            true
+        }
+
         return root
 
     }
@@ -339,7 +382,7 @@ class HomeFragment : Fragment() {
         val id = item.itemId
         when (id)
         {
-
+            R.id.menu -> binding.DL.openDrawer(GravityCompat.START)
         }
         return super.onOptionsItemSelected(item)
     }
