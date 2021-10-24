@@ -21,12 +21,19 @@ import com.example.worldskillbank.table.new_card
 import com.google.android.material.button.MaterialButton
 import com.google.firebase.database.ktx.database
 import com.google.firebase.ktx.Firebase
+import yanzhikai.textpath.SyncTextPathView
+
+
+
 
 
 class MainActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityMainBinding
     var actBar: ActionBar? = null
+
+    var tpv: SyncTextPathView? = null
+
 
     val myDbManager = MuDbManager(this)
 
@@ -49,10 +56,9 @@ class MainActivity : AppCompatActivity() {
         actBar?.hide()
 
 
+        binding.nameBank.startAnimation(1F, 0F)
 
-        val anim = AnimationUtils.loadAnimation(this,R.anim.amim_text)
 
-        binding.name.startAnimation(anim)
 
 
         binding.exchangeRates.setOnClickListener{
@@ -130,31 +136,21 @@ class MainActivity : AppCompatActivity() {
                     val rand_sum = (1000..50000).random()
                     val rand_per_day = (1000..10000).random()
 
-                    val Card_number = (1..9).random().toString()
-                    val Card_number_1 = (1..9).random().toString()
-                    val Card_number_2 = (1..9).random().toString()
-                    val Card_number_3 = (1..9).random().toString()
-                    val Card_number_4 = (1..9).random().toString()
-                    val Card_number_5 = (1..9).random().toString()
-                    val Card_number_6 = (1..9).random().toString()
-                    val Card_number_7 = (1..9).random().toString()
-                    val Card_number_8 = (1..9).random().toString()
-                    val Card_number_9 = (1..9).random().toString()
-                    val Card_number_10 = (1..9).random().toString()
-                    val Card_number_11 = (1..9).random().toString()
-                    val Card_number_12 = (1..9).random().toString()
-                    val Card_number_13 = (1..9).random().toString()
-                    val Card_number_14 = (1..9).random().toString()
+                    var i =0
+                    var Card_number = ""
 
-                    val Card_number_results = Card_number+Card_number_1+Card_number_2+Card_number_3+Card_number_4+Card_number_5+Card_number_6+
-                            Card_number_7+Card_number_8+Card_number_9+Card_number_10+Card_number_11+Card_number_12+Card_number_13+Card_number_14
-
+                    while (i<12)
+                    {
+                        val Card_number_09 = (1..9).random()
+                        Card_number += Card_number_09.toString()
+                        i++
+                    }
 
                     val intent = Intent(this, Main_screen::class.java)
                     startActivity(intent)
 
                     myDbManager.insertToDb(rand_sum.toString(), password.text.toString(),email.text.toString(), login.text.toString(), rand_per_day.toString(),
-                        Card_number_results)
+                        Card_number)
                 }
             }
         }

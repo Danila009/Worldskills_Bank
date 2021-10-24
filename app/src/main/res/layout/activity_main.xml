@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/graduent"
+    android:background="@drawable/button_color"
     tools:context=".MainActivity">
 
     <com.google.android.material.button.MaterialButton
@@ -57,21 +57,25 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 
-    <TextView
-        android:id="@+id/name"
-        android:layout_width="295dp"
-        android:layout_height="112dp"
-        android:layout_marginStart="30dp"
-        android:layout_marginTop="80dp"
-        android:layout_marginEnd="31dp"
-        android:text="@string/name_bank"
-        android:textAlignment="center"
-        android:textColor="@color/white"
-        android:textSize="40sp"
-        app:drawableEndCompat="@drawable/bank"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+    <yanzhikai.textpath.AsyncTextPathView
+        android:id="@+id/name_bank"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="52dp"
+        android:layout_marginBottom="148dp"
+        app:duration="3000"
+        app:layout_constraintBottom_toTopOf="@+id/branches_and_ATMs"
+        app:layout_constraintEnd_toEndOf="@+id/branches_and_ATMs"
+        app:layout_constraintHorizontal_bias="0.522"
+        app:layout_constraintStart_toStartOf="@+id/branches_and_ATMs"
+        app:layout_constraintTop_toTopOf="parent"
+        app:pathStrokeColor="@color/ic_launcher_background"
+        app:repeat="REVERSE"
+        app:showPainter="true"
+        app:text="Worldskills Bank"
+        app:textInCenter="true"
+        app:textSize="50sp"
+        tools:ignore="MissingConstraints" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
